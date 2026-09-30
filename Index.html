@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Knightfall: Guardian of the Dark Realm</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         START SCREEN
+    ========================== -->
+
+    <div id="startScreen" class="screen">
+
+        <div class="menu-box">
+
+            <h1>KNIGHTFALL</h1>
+
+            <h2>Guardian of the Dark Realm</h2>
+
+            <p>
+                Become a young knight, explore magical worlds,
+                defeat monsters and defeat the Dark Lord.
+            </p>
+
+            <h3>Choose Difficulty</h3>
+
+            <div class="difficulty-buttons">
+
+                <button class="difficulty easy" data-difficulty="easy">
+                    EASY
+                </button>
+
+                <button class="difficulty normal" data-difficulty="normal">
+                    NORMAL
+                </button>
+
+                <button class="difficulty hard" data-difficulty="hard">
+                    HARD
+                </button>
+
+            </div>
+
+            <div class="controls">
+
+                <h3>Controls</h3>
+
+                <p>← → Move</p>
+                <p>SPACE Jump</p>
+                <p>X Shoot</p>
+                <p>R Restart</p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         GAME SCREEN
+    ========================== -->
+
+    <div id="gameScreen" class="screen hidden">
+
+        <div id="hud">
+
+            <div>
+                ❤️ Health:
+                <span id="health">5</span>
+            </div>
+
+            <div>
+                💎 Crystals:
+                <span id="crystals">0</span>
+            </div>
+
+            <div>
+                ⭐ Score:
+                <span id="score">0</span>
+            </div>
+
+            <div>
+                🌍 World:
+                <span id="world">1</span>
+            </div>
+
+        </div>
+
+        <canvas
+            id="gameCanvas"
+            width="1000"
+            height="600">
+        </canvas>
+
+    </div>
+
+
+    <!-- =========================
+         GAME OVER SCREEN
+    ========================== -->
+
+    <div id="gameOverScreen" class="screen hidden">
+
+        <div class="menu-box">
+
+            <h1>GAME OVER</h1>
+
+            <p>The Dark Realm has defeated you.</p>
+
+            <p>
+                Final Score:
+                <strong id="finalScore">0</strong>
+            </p>
+
+            <button id="restartButton">
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <!-- =========================
+         VICTORY SCREEN
+    ========================== -->
+
+    <div id="victoryScreen" class="screen hidden">
+
+        <div class="menu-box">
+
+            <h1>VICTORY!</h1>
+
+            <h2>The Dark Lord Has Fallen!</h2>
+
+            <p>
+                You have saved the kingdom from darkness.
+            </p>
+
+            <p>
+                Final Score:
+                <strong id="victoryScore">0</strong>
+            </p>
+
+            <button id="victoryRestart">
+                PLAY AGAIN
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
